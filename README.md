@@ -10,12 +10,12 @@ License: GPLv3
 
 - Open a terminal at the project root and run the following for local development:
 
-    $ docker-compose -f local.yml up
+      $ docker-compose -f local.yml up
 
 
 - And then run:
 
-    $ docker-compose -f local.yml run --rm django python manage.py migrate
+      $ docker-compose -f local.yml run --rm django python manage.py migrate
 
 ### Setting Up Your Users
 
