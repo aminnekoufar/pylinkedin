@@ -31,27 +31,23 @@ For convenience, you can keep your normal user logged in on Chrome and your supe
 
 Running type checks with mypy:
 
-    $ mypy pylinkedin
+    $ docker-compose -f local.yml run --rm mypy pylinkedin
 
 ### Test coverage
 
 To run the tests, check your test coverage, and generate an HTML coverage report:
 
-    $ coverage run -m pytest
-    $ coverage html
+    $ docker-compose -f local.yml run --rm coverage run -m pytest
+    $ docker-compose -f local.yml run --rm coverage html
     $ open htmlcov/index.html
 
 #### Running tests with pytest
 
-    $ pytest
+    $ docker-compose -f local.yml run --rm pytest
 
 
 ### Sentry
 
-Sentry is an error logging aggregator service. You can sign up for a free account at <https://sentry.io/signup/?code=cookiecutter> or download and host it yourself.
-The system is set up with reasonable defaults, including 404 logging and integration with the WSGI application.
-
-You must set the DSN url in production.
 
 ## Deployment
 
